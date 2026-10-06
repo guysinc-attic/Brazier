@@ -43,7 +43,7 @@ without a human; the checks that need a phone in a hand are listed under Open.
   forwards to it and serves the relay's discovery document. Three dashboards and three rules on TestData,
   a `reviewer` Editor with a password; the relay serves the origin and routes `site=demo` to that login.
   Credentials in `/root/.config/brazier/demo-credentials` on mitochondria.
-- **Docs site** at https://guys-inc-public.github.io/Brazier/ from `scripts/site.py` and a Pages workflow,
+- **Docs site** at https://brazier.guysinc.pub/ from `scripts/site.py` and a Pages workflow,
   with the privacy policy and support page the listing points at.
 - **App Store listing** filed through the API by `scripts/listing.mjs` from `docs/reference/listing.md`:
   subtitle, categories, age rating, description, keywords, URLs, copyright, manual release, no

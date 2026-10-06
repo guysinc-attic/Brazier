@@ -57,15 +57,15 @@ First release.
 
 ## Support URL
 
-https://guys-inc-public.github.io/Brazier/support/
+https://brazier.guysinc.pub/support/
 
 ## Marketing URL
 
-https://guys-inc-public.github.io/Brazier/
+https://brazier.guysinc.pub/
 
 ## Privacy policy URL
 
-https://guys-inc-public.github.io/Brazier/privacy/
+https://brazier.guysinc.pub/privacy/
 
 ## Copyright
 

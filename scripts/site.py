@@ -2,7 +2,7 @@
 """Builds the docs site: docs/**/*.md and README.md become site/, one page per document.
 
     python3 scripts/site.py            # writes site/ (gitignored)
-    SITE_BASE=/ python3 scripts/site.py   # for a root-hosted copy; GitHub Pages serves /Brazier/
+    SITE_BASE=/Brazier/ python3 scripts/site.py   # for a copy under the old project path; the custom domain brazier.guysinc.pub serves the root
 
 Needs the `markdown` package (pip install markdown). Everything else is the standard library.
 Front matter is stripped; the first `# ` heading is the page title. Relative links to .md files become
@@ -24,7 +24,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 OUT = ROOT / "site"
-BASE = os.environ.get("SITE_BASE", "/Brazier/")
+BASE = os.environ.get("SITE_BASE", "/")
 if not BASE.endswith("/"):
     BASE += "/"
 REPO = "https://github.com/Guys-Inc-Public/Brazier"

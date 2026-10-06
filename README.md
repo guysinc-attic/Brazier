@@ -39,7 +39,7 @@ There is no app yet. The repository holds the study, the architecture, the decis
 | `app/` | The iPhone and iPad app: SwiftUI, xcodegen; `make` targets build, archive and upload from the Mac mini |
 | `scripts/check.py` | CI: front matter on every docs page, valid JSON boards |
 | `scripts/listing.mjs`, `scripts/screenshots.mjs`, `scripts/release.mjs` | The App Store listing filed from `docs/reference/listing.md`, the screenshots, the build attached to the version |
-| `scripts/site.py` | The docs site, built from this folder and published at <https://guys-inc-public.github.io/Brazier/> ([privacy](docs/privacy.md), [support](docs/support.md)) |
+| `scripts/site.py` | The docs site, built from this folder and published at <https://brazier.guysinc.pub/> ([privacy](docs/privacy.md), [support](docs/support.md)) |
 
 ## Grafana
 
