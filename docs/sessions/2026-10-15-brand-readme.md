@@ -18,3 +18,5 @@ CJ, 2026-10-15: update the branding and names of all the current repositories. T
 
 ## Not done
 - Nothing else in the repository changed; the README body below the header is as it was.
+
+Amended 2026-10-16 (sb-0231): the banner is this repository's own, generated in Branding-Standards and committed at `docs/assets/readme-header.svg`.
