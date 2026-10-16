@@ -1,13 +1,12 @@
-<img src="https://raw.githubusercontent.com/Guys-Inc-Public/Branding-Standards/main/assets/readme-header.svg" alt="Guys Inc" width="100%">
+<img src="https://brand.guysinc.pub/banner/readme-header.svg" alt="Guys Inc" width="100%">
 
 # Brazier
 
 A companion iPhone app for self-hosted Grafana: real push for firing and resolved alerts, sign-in the way self-hosters run Grafana, dashboards on a phone.
 
 ![Licence](https://img.shields.io/badge/licence-MIT-ff67bd?style=flat-square&labelColor=0e090f)
-![Build](https://github.com/Guys-Inc-Public/Brazier/actions/workflows/check.yml/badge.svg)
+![Build](https://github.com/guysinc-public/Brazier/actions/workflows/check.yml/badge.svg)
 ![Docs](https://img.shields.io/badge/docs-reviewed_2026--09--28-22dcb3?style=flat-square&labelColor=0e090f)
-![Version](https://img.shields.io/badge/version-v0.0.0-a984fb?style=flat-square&labelColor=0e090f)
 
 ## Quickstart
 
