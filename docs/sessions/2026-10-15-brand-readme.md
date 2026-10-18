@@ -20,3 +20,5 @@ CJ, 2026-10-15: update the branding and names of all the current repositories. T
 - Nothing else in the repository changed; the README body below the header is as it was.
 
 Amended 2026-10-16 (sb-0231): the banner is this repository's own, generated in Branding-Standards and committed at `docs/assets/readme-header.svg`.
+
+Amended 2026-10-18 (sb-0262, Clippy on PR #2): `scripts/site.py` copies `docs/assets/` into the built site and links the banner there instead of to a GitHub page, so it renders on brazier.guysinc.pub; the site's repository link and the two URLs in `docs/support.md` move from `Guys-Inc-Public` to `guysinc-public/Brazier`.

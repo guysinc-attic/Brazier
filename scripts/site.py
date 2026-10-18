@@ -6,7 +6,7 @@
 
 Needs the `markdown` package (pip install markdown). Everything else is the standard library.
 Front matter is stripped; the first `# ` heading is the page title. Relative links to .md files become
-page links, relative images and SVGs point at their copied files. The stylesheet is inline, on the brand:
+page links, relative images and SVGs (assets/, docs/assets/, docs/diagrams/) point at their copied files. The stylesheet is inline, on the brand:
 ink ground, Archivo and Martian Mono (shipped as the app's own variable fonts), hairlines, radius 0.
 """
 import html
@@ -27,7 +27,8 @@ OUT = ROOT / "site"
 BASE = os.environ.get("SITE_BASE", "/")
 if not BASE.endswith("/"):
     BASE += "/"
-REPO = "https://github.com/Guys-Inc-Public/Brazier"
+REPO_SHORT = "guysinc-public/Brazier"
+REPO = f"https://github.com/{REPO_SHORT}"
 TAGLINE = "Alerts and dashboards for self-hosted Grafana"
 
 # Sections in nav order: (title, docs subdirectory or single file).
@@ -98,7 +99,7 @@ def rewrite_links(page: Page, pages: dict[Path, Page]) -> str:
             return f"{lead}{REPO}/blob/main/{rel}{frag}{close}"
         if rel.startswith("docs/diagrams/"):
             return f"{lead}{BASE}diagrams/{resolved.name}{close}"
-        if rel.startswith("assets/"):
+        if rel.startswith(("assets/", "docs/assets/")):
             return f"{lead}{BASE}{rel}{close}"
         return f"{lead}{REPO}/blob/main/{rel}{close}"
 
@@ -266,12 +267,14 @@ def build() -> None:
         page.out.parent.mkdir(parents=True, exist_ok=True)
         page.out.write_text(TEMPLATE.format(
             title=html.escape(page.title), description=description_for(page), base=BASE, tagline=TAGLINE,
-            repo=REPO, repo_short="Guys-Inc-Public/Brazier", nav=nav(pages, page), crumb=html.escape(crumb_for(page)), body=body,
+            repo=REPO, repo_short=REPO_SHORT, nav=nav(pages, page), crumb=html.escape(crumb_for(page)), body=body,
         ), encoding="utf-8")
     (OUT / "diagrams").mkdir()
     for svg in (DOCS / "diagrams").glob("*.svg"):
         shutil.copy(svg, OUT / "diagrams" / svg.name)
     shutil.copytree(ROOT / "assets", OUT / "assets")
+    if (DOCS / "assets").is_dir():   # the README's own banner and anything else the docs keep beside them
+        shutil.copytree(DOCS / "assets", OUT / "docs" / "assets")
     fonts = OUT / "fonts"
     fonts.mkdir()
     for f in (ROOT / "app" / "Brazier" / "Resources" / "Fonts").iterdir():
